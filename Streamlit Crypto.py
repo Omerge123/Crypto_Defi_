@@ -82,6 +82,19 @@ df       = data[0]
 df_chg   = data[1] 
 df_chart = data[2]
 
+
+####clear cache ###
+from streamlit import caching
+
+if str(date.today()) == str(df['date'].max())[:10]:
+
+    print ('ok')
+        
+else :
+   
+    caching.clear_cache()
+####################################
+
 #####################################################################
 df_chg2 = df_chg.replace([np.inf, -np.inf], np.nan).fillna(0) 
 
