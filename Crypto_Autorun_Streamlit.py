@@ -89,6 +89,18 @@ st.header('DeFi Llama Total Value Locked (TVL) Chain')
 # charts
 st.sidebar.markdown(today_run_date)
 select_event = st.sidebar.selectbox('Selection',options)
+
+st.markdown(f'''
+    <style>
+        section[data-testid="stSidebar"] .css-ng1t4o {{width: 14rem;}}
+        section[data-testid="stSidebar"] .css-1d391kg {{width: 14rem;}}
+    </style>
+''',unsafe_allow_html=True)
+
+
 text(select_event)
 chart(select_event)
 chart2(select_event)
+
+
+
