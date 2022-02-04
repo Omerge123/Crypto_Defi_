@@ -3,7 +3,8 @@ import requests
 import json
 import numpy as np
 from datetime import datetime, timedelta, date
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 import streamlit as st
 
 
