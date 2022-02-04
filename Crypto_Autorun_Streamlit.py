@@ -1,6 +1,4 @@
 import pandas as pd
-import requests
-import json
 import numpy as np
 from datetime import datetime, timedelta, date
 #import matplotlib.pyplot as plt
