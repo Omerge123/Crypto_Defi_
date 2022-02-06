@@ -34,8 +34,6 @@ today_run_date = df['Today'].iloc[0]
 #####################################################################
 df_chg2 = df_chg.replace([np.inf, -np.inf], np.nan).fillna(0) 
 
-#column_name = df_chg2.columns.values.tolist()[-4:]
-options = ["1day%","7day%", "3mth%", "6mth%"]
 
 def text(x):
     date_filter = x[:-1] + '_fix_Date'
@@ -84,11 +82,12 @@ def chart2(value2):
 st.header('DeFi Llama Total Value Locked (TVL) Chain')
 
 
+#column_name = df_chg2.columns.values.tolist()[-4:]
+options = ["1day%","7day%", "3mth%", "6mth%"]
 
-# charts
-st.sidebar.markdown(today_run_date)
-select_event = st.sidebar.selectbox('Selection',options)
+st.write(today_run_date)
 
+select_event = st.selectbox('Selection', options)
 
 text(select_event)
 chart(select_event)
